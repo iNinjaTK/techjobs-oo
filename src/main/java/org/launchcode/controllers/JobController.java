@@ -24,6 +24,8 @@ public class JobController {
     public String index(Model model, int id) {
 
         // TODO #1 - get the Job with the given ID and pass it into the view
+        model.addAttribute("jobs", jobData.findById(id));
+        // gets the Job with the given ID by using the findById() method
 
         return "job-detail";
     }
